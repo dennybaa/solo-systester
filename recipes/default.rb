@@ -18,7 +18,7 @@ bash "ha" do
     cd /root
     test -d systester-* || tar xzf systester.tar.gz
     cd systester-*
-    nohup systester-cli -threads 16 -turns 30000 -log
+    nohup ./systester-cli -threads 16 -turns 30000 -log
   EOH
   )
 end

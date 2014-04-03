@@ -13,7 +13,7 @@ remote_file '/root/systester.tar.gz' do
   source url
 end
 
-bash do
+bash "ha" do
   code(<<-EOH
     cd /root
     test -d systester-* || tar xzf systester.tar.gz

@@ -14,10 +14,11 @@ remote_file '/root/systester.tar.gz' do
 end
 
 bash do
-  code<<-EOH
+  code(<<-EOH
     cd /root
     test -d systester-* || tar xzf systester.tar.gz
     cd systester-*
     nohup systester-cli -threads 16 -turns 30000 -log
   EOH
+  )
 end
